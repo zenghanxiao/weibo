@@ -1,4 +1,4 @@
-const router = require('koa-router')()
+const router = require('koa-router')();
 
 router.get('/', async (ctx, next) => {
   await ctx.render('index', {
@@ -14,34 +14,34 @@ router.get('/', async (ctx, next) => {
       id: 3,
       title: 'ccc'
     }]
-  })
-})
+  });
+});
 
 router.get('/string', async (ctx, next) => {
-  ctx.body = 'koa2 string'
-})
+  ctx.body = 'koa2 string';
+});
 
 router.get('/json', async (ctx, next) => {
   ctx.body = {
     title: 'koa2 json'
-  }
-})
+  };
+});
 
 router.get('/profile/:username', async (ctx, next) => {
-  const { username } = ctx.params
+  const { username } = ctx.params;
   ctx.body = {
     title: 'this. profile page',
     username
-  }
-})
+  };
+});
 
 router.get('/loadMore/:username/:pageIndex', async (ctx, next) => {
-  const { username, pageIndex } = ctx.params
+  const { username, pageIndex } = ctx.params;
   ctx.body = {
     title: 'this is loadMore API',
     username,
     pageIndex
-  }
-})
+  };
+});
 
-module.exports = router
+module.exports = router;
