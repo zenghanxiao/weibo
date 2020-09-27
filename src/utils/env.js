@@ -1,3 +1,8 @@
+/**
+ * @description 环境变量
+ * @author 曾含晓
+ */
+
 const ENV = process.env.NODE_ENV;
 
 module.exports = {
