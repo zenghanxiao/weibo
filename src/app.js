@@ -42,7 +42,7 @@ app.use(session({
   store: redisStore({
     all: `${REDIS_CONF.host}:${REDIS_CONF.port}`
   })
-}))
+}));
 
 // logger
 // app.use(async (ctx, next) => {
